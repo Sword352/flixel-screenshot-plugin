@@ -7,6 +7,9 @@
 
 </div>
 
+[!WARNING]
+> This plugin is not supported in HTML5 or Flash.
+
 # Installation
 1. Make sure you have `flixel` and `openfl` installed.
 2. Through a command prompt, install the library using:
