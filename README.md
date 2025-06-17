@@ -7,7 +7,7 @@
 
 </div>
 
-[!WARNING]
+> [!WARNING]
 > This plugin is not supported in HTML5 or Flash.
 
 # Installation
