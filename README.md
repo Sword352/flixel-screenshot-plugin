@@ -1,38 +1,25 @@
 <div align="center">
 
 # flixel-screenshot-plugin
+### A simple screenshot recorder for Flixel
 
-## `haxelib install flixel-screenshot-plugin`
-
-## or
-
-## `haxelib git flixel-screenshot-plugin http://github.com/sayofthelor/flixel-screenshot-plugin` (currently recommended)
+<img src="preview.gif" width="400" />
 
 </div>
 
-## Flixel plugin for nice screenshot management, with many customizations
-```haxe
-ScreenShotPlugin.enabled:Bool; // Enable/disable the plugin at any time
-ScreenShotPlugin.screenshtotKeys:Array<FlxKey>; // Keys to press to do a screenshot
-ScreenShotPlugin.saveFormat:FileFormatOption; // The save file type (FileFormatOption.PNG/ FileFormatOption.JPEG)
-ScreenShotPlugin.screenshotPath:String; // The path where to save the screenshots
-ScreenShotPlugin.flashColor:Int; // The color of the flash that appears when taking a screenshot (0xAARRGGBB)
-ScreenShotPlugin.outlineColor:Int; // The shot display outline's color that appears when taking a screenshot (0xAARRGGBB)
-ScreenShotPlugin.screenshotFadeTime:Float; // The flash fade-in duration
-ScreenShotPlugin.jpegQuality:Int; // If `saveFormat` is set to JPEG, this defines the quality of the JPEG files (0-100)
-ScreenShotPlugin.sound:FlxSoundAsset; // Custom sound asset to play when the screenshot is taken (if null, no sound is played)
-```
-
-### Some original code from [flixel-addons](http://lib.haxe.org/p/flixel-addons).
-
-# Configuring
-Make sure you have `flixel` and `openfl` installed.
-In your `Project.xml` make sure this is there:
+# Installation
+1. Make sure you have `flixel` and `openfl` installed.
+2. Through a command prompt, install the library using:
+    - `haxelib install flixel-screenshot-plugin` for latest stable release, or
+    - `haxelib git flixel-screenshot-plugin http://github.com/sayofthelor/flixel-screenshot-plugin` to get the latest changes (may be unstable)
+3. Add the library into your project file (`project.xml`/`project.hxp`):
 ```xml
 <haxelib name="flixel-screenshot-plugin" />
 ```
-In your project's `Main.hx` file, after the `FlxGame` is initialized, add this line:
+4. In your project's main module, after initializing an `FlxGame` instance, initialize an instance of the plugin:
 ```haxe
-flixel.FlxG.plugins.add(new flixel.addons.plugin.ScreenShotPlugin());
+flixel.FlxG.plugins.addPlugin(new flixel.addons.plugin.FlxScreenshotPlugin());
 ```
-And you're done!
+5. You're done!
+
+The `FlxScreenshotPlugin` instance holds many properties you can change to customize the plugin.
