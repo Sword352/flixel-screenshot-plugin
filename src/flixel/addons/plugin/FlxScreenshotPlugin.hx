@@ -141,6 +141,7 @@ class FlxScreenshotPlugin extends FlxBasic {
 	}
 
 	public function takeScreenshot(): Void {
+		// NOTE: we must read the game pixels into the main thread, as OpenGL dislikes threading
 		_messageQueue.push(FlxG.stage.window.readPixels(_screenshotRegion));
 	}
 
